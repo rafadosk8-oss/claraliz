@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff1f7">
+  <title>Clara Liz | Um dia muito especial</title>
+  <style>
+    :root {
+      --pink: #f5a8c8;
+      --deep: #a83f75;
+      --cream: #fffaf5;
+      --ink: #51384a;
+      --lavender: #d9c9f5;
+      --gold: #f4cf7a;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--ink);
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      background: var(--cream);
+    }
+    .hero {
+      min-height: 100svh; position: relative; overflow: hidden;
+      display: grid; place-items: center; text-align: center;
+      padding: 64px 22px;
+      background: radial-gradient(circle at 15% 20%, #fff 0 7%, transparent 7.5%),
+        radial-gradient(circle at 85% 25%, #fff 0 5%, transparent 5.5%),
+        linear-gradient(145deg, #ffe4ef, #f9eaff 55%, #fff2d9);
+    }
+    .hero::before, .hero::after {
+      content: "✦  ✧  ♡  ✧  ✦"; position: absolute; color: #d77da7;
+      font-size: clamp(22px, 4vw, 42px); letter-spacing: 18px; opacity: .55;
+      animation: float 7s ease-in-out infinite;
+    }
+    .hero::before { top: 9%; left: 3%; transform: rotate(-15deg); }
+    .hero::after { bottom: 10%; right: 2%; transform: rotate(12deg); }
+    .hero-content { position: relative; z-index: 1; max-width: 760px; }
+    .eyebrow {
+      display: inline-block; padding: 9px 17px; border-radius: 99px;
+      background: #ffffffb8; color: var(--deep); font-size: .82rem;
+      font-weight: 800; letter-spacing: .14em; text-transform: uppercase;
+    }
+    h1 {
+      margin: 22px 0 8px; color: var(--deep);
+      font-family: Georgia, serif; font-weight: 500;
+      font-size: clamp(3.7rem, 12vw, 7.7rem); line-height: .98;
+      text-shadow: 0 5px 0 #ffffff9c;
+    }
+    .subtitle { font-family: Georgia, serif; font-size: clamp(1.25rem, 3vw, 1.8rem); }
+    .date { margin: 24px 0; font-size: 1.12rem; font-weight: 800; color: #8d5274; }
+    .scroll {
+      display: inline-block; margin-top: 22px; padding: 13px 22px;
+      color: white; background: var(--deep); border-radius: 99px;
+      text-decoration: none; font-weight: 800; box-shadow: 0 8px 20px #a83f7530;
+      transition: transform .2s;
+    }
+    .scroll:hover { transform: translateY(-3px); }
+    section { padding: 76px 22px; }
+    .wrap { width: min(980px, 100%); margin: auto; }
+    .intro { text-align: center; background: #fffaf5; }
+    h2 {
+      margin: 0 0 18px; color: var(--deep);
+      font: 500 clamp(2rem, 5vw, 3.2rem) Georgia, serif;
+    }
+    .intro p { max-width: 680px; margin: auto; font-size: 1.12rem; line-height: 1.85; }
+    .countdown-section {
+      text-align: center;
+      background: linear-gradient(135deg, #fce2ed, #eee5ff);
+    }
+    .countdown { display: flex; justify-content: center; flex-wrap: wrap; gap: 13px; margin-top: 30px; }
+    .time {
+      width: 112px; padding: 19px 10px; border-radius: 20px;
+      background: #ffffffc9; box-shadow: 0 8px 24px #76506a12;
+    }
+    .time strong { display: block; color: var(--deep); font-size: 2.25rem; }
+    .time span { font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; }
+    .note {
+      max-width: 680px; margin: 35px auto 0; padding: 28px;
+      border: 1px dashed #d88eb2; border-radius: 22px; background: #fffdfb;
+      text-align: center; line-height: 1.8;
+    }
+    .note .heart { font-size: 2rem; color: #d65b91; }
+    footer { padding: 28px 16px; text-align: center; color: #946b83; background: #fff; }
+    .sparkle { color: #d69b36; }
+    @keyframes float { 0%,100% { translate: 0 0; } 50% { translate: 0 -14px; } }
+    @media (max-width: 480px) {
+      section { padding: 58px 18px; }
+      .time { width:  calc(50% - 8px); max-width: 135px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">Um dia cheio de amor</span>
+        <h1>Clara Liz</h1>
+        <div class="subtitle">Nosso presente mais lindo merece ser celebrado! ♡</div>
+        <div class="date">03 de fevereiro</div>
+        <a class="scroll" href="#mensagem">Vamos comemorar ↓</a>
+      </div>
+    </header>
+
+    <section class="intro" id="mensagem">
+      <div class="wrap">
+        <h2>O dia é todinho dela! <span class="sparkle">✦</span></h2>
+        <p>
+          Hoje é dia de celebrar a alegria, a doçura e a luz que a Clara Liz
+          trouxe para nossas vidas. Que nunca faltem motivos para sorrir,
+          sonhos para realizar e muito amor em cada passo do caminho.
+        </p>
+      </div>
+    </section>
+
+    <section class="countdown-section">
+      <div class="wrap">
+        <h2>Está chegando! ♡</h2>
+        <p id="countdown-caption">Contagem regressiva para o próximo 03 de fevereiro</p>
+        <div class="countdown" aria-live="polite">
+          <div class="time"><strong id="days">--</strong><span>dias</span></div>
+          <div class="time"><strong id="hours">--</strong><span>horas</span></div>
+          <div class="time"><strong id="minutes">--</strong><span>minutos</span></div>
+          <div class="time"><strong id="seconds">--</strong><span>segundos</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="note">
+          <div class="heart">♥</div>
+          <h2>Com todo nosso amor</h2>
+          <p>
+            Clara Liz, que Deus ilumine sempre seus caminhos, proteja seus
+            passos e encha sua vida de saúde, alegria e bênçãos.
+            Você é muito amada!
+          </p>
+          <strong>Feliz aniversário, princesa! ✨</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>Feito com muito carinho para Clara Liz ♡</footer>
+
+  <script>
+    // A contagem considera o próximo dia 3 de fevereiro.
+    function updateCountdown() {
+      const now = new Date();
+      let target = new Date(now.getFullYear(), 1, 3, 0, 0, 0);
+      if (now >= target) target = new Date(now.getFullYear() + 1, 1, 3, 0, 0, 0);
+      const diff = Math.max(0, target - now);
+      document.getElementById('days').textContent = Math.floor(diff / 86400000);
+      document.getElementById('hours').textContent = Math.floor(diff / 3600000) % 24;
+      document.getElementById('minutes').textContent = Math.floor(diff / 60000) % 60;
+      document.getElementById('seconds').textContent = Math.floor(diff / 1000) % 60;
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
